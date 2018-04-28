@@ -1,12 +1,12 @@
-module mux_2to1(in_a, in_b, sel, out);
+module mux_2to1(a, b, sel, out);
 
-input in_a, in_b, sel;
+input a, b, sel;
 output out;
-wire out_a, out_b, sel_bar;
+wire and1_out, and2_out, sel_bar;
 
 not inv1(sel_bar, sel);
-and and1(out1, a, sel);
-and and2(out2, sel_bar, in_b);
-or  or1(out, out1, out2);
+and and1(and1_out, a, sel_bar);
+and and2(and2_out, b, sel);
+or  or1(out, and1_out, and2_out);
 
 endmodule

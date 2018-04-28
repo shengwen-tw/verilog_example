@@ -4,7 +4,7 @@ build: mux_2to1.v test_mux.v
 sim: sim_out.vvp
 	vvp $^
 
-plot: test_mux.vcd
+plot: sim_out.vcd
 	gtkwave $^
 
 clean:
