@@ -1,0 +1,11 @@
+build: mux_2to1.v test_mux.v
+	iverilog $^  -o sim_out.vvp
+
+sim: sim_out.vvp
+	vvp $^
+
+plot: test_mux.vcd
+	gtkwave $^
+
+clean:
+	rm sim_out.vvp test_mux.vcd
