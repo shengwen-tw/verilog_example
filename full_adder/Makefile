@@ -8,4 +8,4 @@ plot: sim_out.vcd
 	gtkwave $^
 
 clean:
-	rm sim_out.vvp test_mux.vcd
+	rm sim_out.vvp sim_out.vcd
